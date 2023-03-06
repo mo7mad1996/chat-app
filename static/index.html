@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دردشة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body dir="rtl">
+    <section id="no_room">
+      <div class="container">
+        <h1>دردشة</h1>
+        <button id="new_room" class="d-block mb-3">انشاء غرفة دردشه</button>
+        <form id="old_room">
+          <h3 class="mb-3">دخول غرفة</h3>
+          <input
+            name="room"
+            placeholder="رمز الغرفه..."
+            autofocus
+            name="room"
+          />
+          <button class="d-block mt-2" type="submit">دخول</button>
+        </form>
+      </div>
+    </section>
+    <section id="with_room" class="d-none">
+      <header>
+        <h1>دردشة</h1>
+
+        <div class="buttons">
+          <button id="copy">نسخ رمز الدردشة</button>
+          <button id="logout">خروج</button>
+        </div>
+      </header>
+
+      <div class="container">
+        <main>
+          <ul id="chats">
+            <!-- fill it by js -->
+          </ul>
+        </main>
+        <form id="chat_form">
+          <input
+            name="msg"
+            autofocus
+            autocomplete="off"
+            placeholder="اكتب  رسالة..."
+          />
+        </form>
+      </div>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
