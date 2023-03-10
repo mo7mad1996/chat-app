@@ -13,7 +13,7 @@
 console.clear();
 const express = require("express");
 const app = express();
-const server = app.listen(3000);
+const server = app.listen(procecc.env.PORT || 3000);
 app.use(express.static("./static"));
 
 const socketio = require("socket.io");
